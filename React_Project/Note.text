@@ -1,0 +1,8 @@
+// React Notes 
+
+what is react?
+
+react is a javascript libarary buit for make Single Page Application(SPA).
+
+/// In react we use jsx systex beacuse we write js with html <>Hello {world}</>;
+// 
