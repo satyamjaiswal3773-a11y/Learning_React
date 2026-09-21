@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 4rem;
+    padding: 1rem var(--page-gutter);
+    color: #0f0000;
+    background: #ffffff;
+    text-align: right;
+}
+
+.footer-logo-highlight {
+    color: #087ff5;
+    font-weight: 700;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+@media (max-width: 40rem) {
+    .footer {
+        justify-content: center;
+        text-align: center;
+    }
+}

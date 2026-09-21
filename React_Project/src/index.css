@@ -1,0 +1,113 @@
+/* Global styles: loaded once by main.jsx and inherited by every page. */
+:root {
+  font-family: Arial, sans-serif;
+  color: #172b4d;
+  background: #f5f5f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --page-gutter: clamp(1rem, 4vw, 3.125rem);
+  --content-width: 75rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 20rem;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 20rem;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background: #f5f5f5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+  overflow-wrap: break-word;
+}
+
+p,
+li {
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+/* Use .container inside any page or section for a centred, responsive layout. */
+.container {
+  width: min(100% - (var(--page-gutter) * 2), var(--content-width));
+  margin-inline: auto;
+}
+
+/* Use .page for every full-screen route/page. */
+.page {
+  width: 100%;
+  min-height: 100vh;
+  padding-inline: var(--page-gutter);
+}
+
+:focus-visible {
+  outline: 3px solid #007bff;
+  outline-offset: 3px;
+}
+
+/* Tablet and phone defaults. Component layouts can add their own rules below. */
+@media (max-width: 48rem) {
+  :root {
+    --page-gutter: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+  }
+}
+
+@media (max-width: 24rem) {
+  :root {
+    --page-gutter: 0.75rem;
+  }
+}
