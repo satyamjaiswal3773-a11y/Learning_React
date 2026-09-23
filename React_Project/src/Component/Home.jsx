@@ -1,11 +1,15 @@
-import backgroundImage from '../assets/BackgroundImg.png';
-
+import backgroundImage from "../assets/BackgroundImg.png";
+// import Cards from "./Cards/Cards";
 function Home() {
   return (
     <div>
-      <h1>Welcome to OneTrip</h1>
-      <p>Your travel companion for unforgettable journeys.</p>
-      <img src={backgroundImage} alt="Background" style={{ width: '100%', height: 'auto' }} />
+      <img
+        src={backgroundImage}
+        alt="Background"
+        style={{ width: "100%", height: "auto" }}
+      />
+
+      {/* <Cards /> */}
     </div>
   );
 }

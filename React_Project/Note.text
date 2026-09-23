@@ -5,4 +5,113 @@ what is react?
 react is a javascript libarary buit for make Single Page Application(SPA).
 
 /// In react we use jsx systex beacuse we write js with html <>Hello {world}</>;
+
+React Component :-
+
+function Component(){
+    return(
+        <>
+          <nav>
+             <img  src="./showhere image" alternative="alternativeNameOfImage">
+          </nav>
+          <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Contact</li>
+          </ul>
+        </>
+    )
+}
+
+export default Component;
+
+/// Component are re-usable block of code , which is we use whaterver we want to use.
+
+
 // 
+
+Props  :-
+
+=>> Props are a way to pass data from a parent component to a child component.
+
+like if we want to change some data of a component then we can change throughout their component not overwirt them.
+
+import Cards from "./Cards/Cards.jsx";
+import BMW5 from "../assets/bmw5.jpg";
+import BW5 from "../assets/5.jpg";
+import Gt from "../assets/gt.jpg";
+import GT650 from "../assets/Gt650.jpg";
+
+function  Contact() {
+    return (
+        <>
+            <Cards
+                cardImage1={BMW5}
+                cardImage2={BW5}
+                cardImage3={Gt}
+                cardImage4={GT650}
+            />
+        </>
+    );
+}
+
+export default Contact;
+
+
+---
+
+import data from "./Data.jsx";
+import "./About.css";
+
+function About() {
+  const aboutData = data.map((Data) => {
+    return (
+      <div className="about-card" key={Data.id}>
+        <img src={Data.img} alt={Data.title} />
+        <div className="cards-container">
+          <h2>{Data.title}</h2>
+          <p>{Data.description}</p>
+        </div>
+      </div>
+    );
+  });
+
+  return <>{aboutData}</>;
+}
+
+export default About;
+
+
+we can do prop destructuring in where we do like this 
+
+import data from "./Data.jsx";
+import "./About.css";
+
+function About() {
+  const aboutData = data.map((id, img , title , description) => {
+    return (
+      <div className="about-card" key={id}>
+        <img src={img} alt={Data.title} />
+        <div className="cards-container">
+          <h2>{title}</h2>
+          <p>{description}</p>
+        </div>
+      </div>
+    );
+  });
+
+  return <>{aboutData}</>;
+}
+
+export default About;
+
+------------------------------------------------------
+
+
+
+
+
+
+
+
+
